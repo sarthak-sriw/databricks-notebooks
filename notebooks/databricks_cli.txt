@@ -1,0 +1,19 @@
+#install databricks cli
+pip install databricks-cli
+
+#setup connection to databricks cluster
+databricks configure
+
+databricks clusters list
+databricks clusters get --cluster-id ____________________
+databricks clusters list-node-types 
+databricks fs ls
+databricks fs mkdirs dbfs:/FileStore/tables/<folder_name>
+databricks fs ls dbfs:/FileStore/tables/
+databricks fs cp <local_file_path>  dbfs:/FileStore/tables/<folder_name>
+
+databricks fs rm -r <folder_name>
+databricks workspace ls
+databricks workspace ls /Users/<account>
+databricks workspace export <notebook_path>  <local_file_path> -o --format JUPYTER
+databricks workspace export_dir <folder_path> <local_file_path> -o
